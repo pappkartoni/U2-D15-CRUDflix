@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+        crossorigin="anonymous"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>Netflix</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid px-5">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/netflix_logo.png" height="49px">
+                </a>
+                <a class="navbar-toggler mr-auto" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    Browse<span class="arrow"></span>
+                </a>
+                <div class="collapse navbar-collapse mr-auto" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ml-2">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item ml-2 active">
+                            <a class="nav-link" href="#">TV Shows</a>
+                        </li>
+                        <li class="nav-item ml-2">
+                            <a class="nav-link" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item ml-2">
+                            <a class="nav-link" href="#">Recently Added</a>
+                        </li>
+                        <li class="nav-item ml-2">
+                            <a class="nav-link" href="#">My List</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="altnav d-flex align-items-center">
+                    <div class="altnavelem">
+                        <a href="#"><svg style="margin-top: -4px; margin-right: 4px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 11C14 14.3137 11.3137 17 8 17C4.68629 17 2 14.3137 2 11C2 7.68629 4.68629 5 8 5C11.3137 5 14 7.68629 14 11ZM14.3623 15.8506C12.9006 17.7649 10.5945 19 8 19C3.58172 19 0 15.4183 0 11C0 6.58172 3.58172 3 8 3C12.4183 3 16 6.58172 16 11C16 12.1076 15.7749 13.1626 15.368 14.1218L24.0022 19.1352L22.9979 20.8648L14.3623 15.8506Z" fill="currentColor"></path></svg></div</a>
+                    </div>
+                    <div class="altnavelem">
+                        <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard"><path fill-rule="evenodd" clip-rule="evenodd" d="M13 4.07092C16.3922 4.55624 18.9998 7.4736 18.9998 11V15.2538C20.0486 15.3307 21.0848 15.4245 22.107 15.5347L21.8926 17.5232C18.7219 17.1813 15.409 17 11.9998 17C8.59056 17 5.27764 17.1813 2.10699 17.5232L1.89258 15.5347C2.91473 15.4245 3.95095 15.3307 4.99978 15.2538V11C4.99978 7.47345 7.6076 4.55599 11 4.07086V2L13 2V4.07092ZM16.9998 15.1287V11C16.9998 8.23858 14.7612 6 11.9998 6C9.23836 6 6.99978 8.23858 6.99978 11V15.1287C8.64041 15.0437 10.3089 15 11.9998 15C13.6907 15 15.3591 15.0437 16.9998 15.1287ZM8.62568 19.3712C8.6621 20.5173 10.1509 22 11.9993 22C13.8477 22 15.3365 20.5173 15.373 19.3712C15.38 19.1489 15.1756 19 14.9531 19H9.04555C8.82308 19 8.61862 19.1489 8.62568 19.3712Z" fill="currentColor"></path></svg></a>
+                    </div>
+                    <div class="altnavelem" id="userstuff"> <!-- This is pretty unfinished -->
+                        <div class="usermenu d-flex align-items-center">
+                            <img src="assets/avatar.png" style="height: 32px;">
+                            <span class="caret"></span>
+                        </div>
+                        <div id="users">
+                            <div class="d-flex flex-column" >
+                                <p>
+                                    <img src="assets/avatar.png" style="height: 32px;">
+                                    Flo
+                                </p>
+                                <p>
+                                    <img src="assets/avatar.png" style="height: 32px;">
+                                    Flo
+                                </p>
+                                <p>
+                                    <img src="assets/avatar.png" style="height: 32px;">
+                                    Flo
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div
+        class="d-none alert alert-danger alert-dismissible fade show"
+        role="alert"
+        >
+        <span class="alert-text"> A simple danger alert—check it out! </span>
+        <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+        >
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+        <div class="container">
+            <div class="container d-flex justify-content-center align-items-center">
+                <form class="w-100 my-3">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                        type="text"
+                        required
+                        class="form-control"
+                        id="name"
+                        placeholder="Name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea
+                        class="form-control"
+                        required
+                        id="description"
+                        rows="3"
+                        ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select class="custom-select" required id="category">
+                            <option selected>Choose...</option>
+                            <option value="action">Action</option>
+                            <option value="anime">Anime</option>
+                            <option value="british">British</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="crime">Crime</option>
+                            <option value="documentary">Documentary</option>
+                            <option value="drama">Drama</option>
+                            <option value="german">German</option>
+                            <option value="horror">Horror</option>
+                            <option value="international">International</option>
+                            <option value="kids">Kids</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="reality">Reality TV</option>
+                            <option value="romance">Romance</option>
+                            <option value="scifi">Sci-Fi</option>
+                            <option value="teen">Teen</option>
+                            <option value="thriller">Thriller</option>                            
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Image</label>
+                        <input
+                        type="text"
+                        required
+                        class="form-control"
+                        id="image"
+                        placeholder="Image URL"
+                        />
+                    </div>
+                    <button class="btn btn-success" onclick="addEditMovie()">
+                        Create Movie
+                    </button>
+                    <button class="btn btn-info" onclick="addEditMovie()">
+                        Edit Movie
+                    </button>
+                    <button class="btn btn-danger">
+                        Delete Movie
+                    </button>
+                </form>
+              </div>
+        </div>
+        <script src="./js/backend.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
