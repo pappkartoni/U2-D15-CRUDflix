@@ -21,6 +21,7 @@ const getGenres = async () => {
 
 const renderCategories = (genres) => {
     genres.forEach(renderSingleCategory)
+    renderCategoryMenu(genres)
 }
 
 const renderSingleCategory = async (genre) => {
@@ -65,6 +66,15 @@ const renderSingleCategory = async (genre) => {
                             </div>
                         </div>`
     await getMovies(genre)
+}
+
+const renderCategoryMenu = (genres) => {
+    const menu = document.querySelector(".dropdown-menu ")
+    genres.forEach((genre) => {
+        menu.innerHTML += `
+                                <a class="dropdown-item" href="#">${capitalize(genre)}</a>
+                            `
+    })
 }
 
 const getMovies = async (genre) => {

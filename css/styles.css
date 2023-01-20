@@ -42,22 +42,32 @@ h2 {
     font-size: 1.75em;
     font-weight: bold;
 }
+.form-group label {
+    color: white;
+}
+.form-control, .custom-select, .form-control:focus {
+    background-color: hsla(0,0%,100%,.15);
+}
 
 main .row {
-    height: 34vh;
+    max-height: 25vh;
 }
 .subnav {
     height: 68px;
     background-color: #141414;
 }
-#genres {
+.dropdown-menu {
     font-size: 14px;
     background-color: rgba(0,0,0,.7);
-    min-width: 480px;
-    position: absolute;
-    left: -1px;
-    top: 36px;
-    border: 1px solid hsla(0,0%,100%,.15)
+    border: 1px solid hsla(0,0%,100%,.15);
+    border-radius: 0;
+    min-width:0;
+}
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: hsla(0,0%,100%,.15);;
 }
 #genres ul {
     list-style: none;
@@ -87,7 +97,7 @@ main .row {
     color: white;
     background-color: black;
     box-shadow: none;
-    padding: 5px 50px 5px 10px;
+    padding: 5px 10px 5px 10px;
 }
 .btn-outline-secondary[aria-expanded="true"] {
     background: none!important;
@@ -130,7 +140,8 @@ main .row {
     border: none;
     background-color: #141414;
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 0;
+    position: relative;
 }
 .card .card-text {
     font-size: 12px;
@@ -141,11 +152,17 @@ main .row {
     border: none;
 }
 .card-body {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: none;
+    position: absolute;
+    top: 100%;
     padding: 16px;
+    z-index: 20000;
+    width: 100%;
 }
 .card:hover .card-body {
      display: block;
+     z-index: 20000;
 }
 .card-img-top {
     border: none;
@@ -153,6 +170,7 @@ main .row {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-position: bottom;
+    z-index: -1;
 }
 .mx-n1 {
     margin-inline: -0.25rem;
@@ -258,6 +276,7 @@ footer ul {
 }
 footer li {
     cursor: pointer;
+    z-index: -1;
 }
 footer li:hover {
     text-decoration: underline;

@@ -5,14 +5,16 @@ const genre = params.get("genre")
 const url = "https://striveschool-api.herokuapp.com/api/movies/"
 const method = id ? "PUT" : "POST"
 
-const addEditMovie = async () => {
+const addEditMovie = async (event) => {
     try {
+        event.preventDefault()
         const movie = {
             name: document.querySelector("#name").value,
             description: document.querySelector("#description").value,
             category: document.querySelector("#category").value,
             imageUrl: document.querySelector("#image").value,
         }
+        console.log(movie)
         const options = {
             headers: new Headers({
                 "Content-type": "application/json",
@@ -23,7 +25,13 @@ const addEditMovie = async () => {
         }
         const isValid = movie.name && movie.description && movie.category && movie.imageUrl
         if (isValid) {
-            const res = await fetch(url + id, options)
+            let urlToPass
+            if (id) {
+                urlToPass = url + id
+            } else {
+                urlToPass = url
+            }
+            const res = await fetch(urlToPass, options)
             if (res.ok) {
                 if (!id) {
                     //location.reload()
