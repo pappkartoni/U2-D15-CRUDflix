@@ -7,7 +7,9 @@ const method = id ? "PUT" : "POST"
 
 const addEditMovie = async (event) => {
     try {
-        event.preventDefault()
+        if (id) {
+            event.preventDefault()
+        }
         const movie = {
             name: document.querySelector("#name").value,
             description: document.querySelector("#description").value,

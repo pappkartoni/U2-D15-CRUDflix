@@ -1,7 +1,7 @@
-const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2M5MzBmNmU3MzczODAwMTUzNzQzNzMiLCJpYXQiOjE2NzQxMjk2NTQsImV4cCI6MTY3NTMzOTI1NH0.uvMVnP_iIKi1Whyr9El3BIGBSqO_016vYWPscfX92u8"
+const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2M5MzBmNmU3MzczODAwMTUzNzQzNzMiLCJpYXQiOjE2NzUzNDE1NzUsImV4cCI6MTY3NjU1MTE3NX0.WmNIWEtNArJGmqpfnbxs-o5HyEBAj95Z8nTAfVOr0_o"
 const url = "https://striveschool-api.herokuapp.com/api/movies/"
 
-const getGenres = async () => {
+const getCategories = async () => {
     try {
         const res = await fetch(url, {
             headers: {
@@ -155,7 +155,7 @@ const renderSingleMovie = (movie, row) => {
 
 
 window.onload = async () => {
-    await getGenres()
+    await getCategories()
 }
 
 const capitalize = (str) => {

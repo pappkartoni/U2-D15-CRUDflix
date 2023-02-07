@@ -45,9 +45,9 @@ h2 {
 .form-group label {
     color: white;
 }
-.form-control, .custom-select, .form-control:focus {
+/* .form-control, .custom-select, .form-control:focus {
     background-color: hsla(0,0%,100%,.15);
-}
+} */
 
 main .row {
     max-height: 25vh;
@@ -140,7 +140,7 @@ main .row {
     border: none;
     background-color: #141414;
     color: white;
-    z-index: 0;
+    z-index: 1;
     position: relative;
 }
 .card .card-text {
